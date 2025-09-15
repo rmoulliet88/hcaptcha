@@ -2,11 +2,6 @@
 import { ref } from 'vue'
 import { useHCaptcha } from './composables/useHCaptcha.client';
 
-interface VerifyResponse {
-  success: boolean
-  'error-codes'?: string[]
-}
-
 const sitekey = '10000000-ffff-ffff-ffff-000000000001'; // test sitekey
 
 const { root, token, error, size, reset, waitForToken, switchToVisible, switchToInvisible } = useHCaptcha(sitekey, 'invisible');
