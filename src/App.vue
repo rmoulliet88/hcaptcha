@@ -24,7 +24,7 @@ const activeTab = ref("Info");
     </div>
     <div v-if="activeTab === 'Info'" class="flex flex-col gap-6">
       <div>
-        Invisible mode would want to be your default and if an error is returned, may mean that the user has a higher
+        Invisible mode should be your default and if an error is returned, may indicate that the user has a higher
         risk score, so you would then want to switch to visible. One thing to note with invisible mode is that it may be
         blocked by ad blockers, so you may want to have a fallback in place and switch to visible mode if the captcha
         fails to load.
@@ -36,7 +36,7 @@ const activeTab = ref("Info");
       </div>
       <div>
         Visible mode is more intrusive to the user, but may be necessary for high risk actions, such as submitting a
-        form or making a payment. The biggest thing is, at least it isn't a complicated challenge that frustrates users.
+        form or making a payment. The biggest thing is, at least it’s not a complicated challenge that frustrates users.
         It is a simple checkbox that is easy to understand and complete.
       </div>
       <div class="flex flex-col gap-2">
@@ -77,7 +77,8 @@ const activeTab = ref("Info");
       <div class="flex flex-row gap-4">
         <button v-if="size === 'invisible'" @click="switchToVisible">Switch to visible</button>
         <button v-else @click="switchToInvisible">Switch to invisible</button>
-        <button v-if="size === 'invisible'" @click="waitForToken().then(t => alert(t)).catch(e => alert(e))">Fetch token</button>
+        <button v-if="size === 'invisible'" @click="waitForToken().then(t => alert(t)).catch(e => alert(e))">Fetch
+          token</button>
         <button @click="reset">Reset</button>
       </div>
       <div>Token: {{ token }}</div>
