@@ -13,7 +13,7 @@ const activeTab = ref("Info");
 
 <template>
   <div class="flex flex-col gap-4 mb-4">
-    <div class="text-2xl font-bold text-center">HCaptcha</div>
+    <div class="text-2xl font-bold text-center">hCaptcha</div>
     <div class="tabs">
       <div class="flex gap-4 border-b pb-2">
         <button v-for="tab in tabs" :key="tab" class="px-3 py-2"
